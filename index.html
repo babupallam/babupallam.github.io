@@ -1,82 +1,558 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Babu Pallam — Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root { --max: 980px; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:#0f172a; background:#f8fafc; }
-    header { padding:48px 20px 16px; background:#0f172a; color:#fff; }
-    .wrap { max-width:var(--max); margin:0 auto; }
-    nav a { color:#cbd5e1; margin-right:18px; text-decoration:none; }
-    nav a:hover { color:#fff; }
-    h1 { font-size:40px; margin:12px 0 6px; }
-    h2 { font-size:24px; margin:24px 0 12px; }
-    .tag { display:inline-block; padding:4px 10px; border:1px solid #94a3b8; border-radius:999px; font-size:12px; color:#e2e8f0; }
-    main { padding:28px 20px 60px; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
-    .card { background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:16px; transition:transform .15s ease, box-shadow .15s ease; }
-    .card:hover { transform:translateY(-2px); box-shadow:0 10px 18px rgba(2,6,23,.08); }
-    .card h3 { margin:8px 0 6px; font-size:18px; }
-    .card p { margin:0; color:#475569; font-size:14px; }
-    footer { padding:28px 20px; border-top:1px solid #e2e8f0; text-align:center; color:#64748b; }
-    a.btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid #0f172a; text-decoration:none; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Babu Pallam | Researcher & Developer</title>
+  <meta
+    name="description"
+    content="Professional portfolio of Babu Pallam, a researcher and developer focused on software innovation, applied AI, and research-led engineering."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            slate: {
+              950: "#0f172a"
+            },
+            indigo: {
+              500: "#6366f1"
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"]
+          },
+          boxShadow: {
+            premium: "0 20px 60px rgba(15, 23, 42, 0.28)",
+            card: "0 12px 40px rgba(15, 23, 42, 0.22)"
+          },
+          backgroundImage: {
+            "hero-glow": "radial-gradient(circle at top left, rgba(99,102,241,0.22), transparent 35%), radial-gradient(circle at top right, rgba(148,163,184,0.12), transparent 30%)"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
-  <header>
-    <div class="wrap">
-      <span class="tag">Portfolio</span>
-      <h1>Babu Pallam</h1>
-      <p>AI + Data — 21 Days Projects, research, and engineering notes.</p>
-      <nav aria-label="Primary">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a class="btn" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
-      </nav>
+<body class="bg-slate-950 bg-hero-glow font-sans text-slate-100 antialiased selection:bg-indigo-500/30 selection:text-white">
+  <div class="absolute inset-x-0 top-0 -z-10 h-[32rem] bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.24),transparent_40%)]"></div>
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
+    <nav
+      class="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-white/10 bg-slate-900/65 px-4 py-3 shadow-premium backdrop-blur-xl sm:px-6"
+      aria-label="Primary"
+    >
+      <a href="#home" class="flex items-center gap-3 text-sm font-semibold tracking-[0.24em] text-slate-200 uppercase">
+        <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-base font-bold text-white">BP</span>
+        <span class="hidden sm:inline">Babu Pallam</span>
+      </a>
+
+      <button
+        id="menu-toggle"
+        type="button"
+        class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 text-slate-200 transition hover:border-white/20 hover:bg-white/10 lg:hidden"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Toggle navigation menu"
+      >
+        <i data-lucide="menu" class="h-5 w-5"></i>
+      </button>
+
+      <div class="hidden items-center gap-8 lg:flex">
+        <a class="text-sm text-slate-300 transition hover:text-white" href="#about">About</a>
+        <a class="text-sm text-slate-300 transition hover:text-white" href="#experience">Experience</a>
+        <a class="text-sm text-slate-300 transition hover:text-white" href="#research">Research</a>
+        <a class="text-sm text-slate-300 transition hover:text-white" href="#projects">Projects</a>
+        <a class="text-sm text-slate-300 transition hover:text-white" href="#skills">Skills</a>
+        <a class="text-sm text-slate-300 transition hover:text-white" href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <div
+      id="mobile-menu"
+      class="mx-auto mt-3 hidden max-w-7xl rounded-2xl border border-white/10 bg-slate-900/90 p-4 shadow-card backdrop-blur-xl lg:hidden"
+    >
+      <div class="flex flex-col gap-1">
+        <a class="rounded-xl px-3 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white" href="#about">About</a>
+        <a class="rounded-xl px-3 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white" href="#experience">Experience</a>
+        <a class="rounded-xl px-3 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white" href="#research">Research</a>
+        <a class="rounded-xl px-3 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white" href="#projects">Projects</a>
+        <a class="rounded-xl px-3 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white" href="#skills">Skills</a>
+        <a class="rounded-xl px-3 py-2 text-sm text-slate-300 transition hover:bg-white/5 hover:text-white" href="#contact">Contact</a>
+      </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <section id="projects">
-      <h2>Featured: 21 Days AI Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Day 1 — Titanic Survival Analysis</h3>
-          <p>Data storytelling with EDA, feature engineering, and model baselines.</p>
-          <p><a href="https://github.com/yourusername/21-days-ai-projects/tree/main/day01" target="_blank">Code →</a></p>
-        </article>
-        <article class="card">
-          <h3>Day 2 — Netflix Content Strategy</h3>
-          <p>Catalog insights, trends, and content clusters using NLP + viz.</p>
-          <p><a href="https://github.com/yourusername/21-days-ai-projects/tree/main/day02" target="_blank">Code →</a></p>
-        </article>
-        <article class="card">
-          <h3>Day 3 — Housing Price Trends</h3>
-          <p>Predictive modelling and feature importance for housing markets.</p>
-          <p><a href="https://github.com/yourusername/21-days-ai-projects/tree/main/day03" target="_blank">Code →</a></p>
-        </article>
+  <main id="home">
+    <!-- Hero Section -->
+    <section class="px-4 pb-16 pt-14 sm:px-6 sm:pt-20 lg:px-8 lg:pb-24">
+      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div>
+          <span class="inline-flex items-center rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-indigo-300">
+            Researcher • Developer • Builder
+          </span>
+          <h1 class="mt-6 max-w-4xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-7xl">
+            Software innovation shaped by research discipline and engineering clarity.
+          </h1>
+          <p class="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
+            Babu Pallam designs intelligent systems, research-driven products, and scalable software experiences at the intersection of applied AI, engineering strategy, and academic rigor.
+          </p>
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="#projects"
+              class="inline-flex items-center justify-center rounded-2xl bg-indigo-500 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-indigo-400 hover:shadow-lg hover:shadow-indigo-500/30"
+            >
+              View Portfolio
+            </a>
+            <a
+              href="#"
+              class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition duration-300 hover:border-white/20 hover:bg-white/10"
+              aria-label="Download resume"
+            >
+              <i data-lucide="download" class="h-4 w-4"></i>
+              Download Resume
+            </a>
+          </div>
+          <div class="mt-12 grid max-w-2xl gap-4 sm:grid-cols-3">
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+              <p class="text-2xl font-semibold text-white">8+</p>
+              <p class="mt-1 text-sm text-slate-400">Years building production-grade software systems.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+              <p class="text-2xl font-semibold text-white">15</p>
+              <p class="mt-1 text-sm text-slate-400">Research and engineering initiatives led across domains.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
+              <p class="text-2xl font-semibold text-white">6</p>
+              <p class="mt-1 text-sm text-slate-400">Focus areas spanning AI, systems, product, and analytics.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-card backdrop-blur-md sm:p-8">
+          <div class="rounded-[1.5rem] border border-white/10 bg-slate-900/80 p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-sm font-medium uppercase tracking-[0.24em] text-slate-500">Current Focus</p>
+                <h2 class="mt-3 text-2xl font-semibold text-white">Applied Research for Intelligent Platforms</h2>
+              </div>
+              <span class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">Available</span>
+            </div>
+            <div class="mt-8 space-y-5">
+              <div class="flex gap-4">
+                <span class="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-300">
+                  <i data-lucide="brain-circuit" class="h-5 w-5"></i>
+                </span>
+                <div>
+                  <h3 class="font-medium text-white">AI Systems Design</h3>
+                  <p class="mt-1 text-sm leading-7 text-slate-400">Designing reliable machine learning workflows and product-ready decision systems.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <span class="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-300">
+                  <i data-lucide="flask-conical" class="h-5 w-5"></i>
+                </span>
+                <div>
+                  <h3 class="font-medium text-white">Research Translation</h3>
+                  <p class="mt-1 text-sm leading-7 text-slate-400">Turning early-stage experiments into practical architectures with measurable outcomes.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <span class="mt-1 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-300">
+                  <i data-lucide="layout-dashboard" class="h-5 w-5"></i>
+                </span>
+                <div>
+                  <h3 class="font-medium text-white">Platform Engineering</h3>
+                  <p class="mt-1 text-sm leading-7 text-slate-400">Building maintainable developer platforms, research tooling, and data-rich user interfaces.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>I build AI solutions for search, recommender systems, and computer vision. MSc in AI — focusing on CLIP-based retrieval and evaluation.</p>
+    <!-- About Section -->
+    <section id="about" class="px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-indigo-300">About</p>
+          <h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">A research-oriented builder focused on meaningful software outcomes.</h2>
+          <p class="mt-6 text-base leading-8 text-slate-400 sm:text-lg">
+            Babu Pallam is a researcher and software developer with a strong interest in applied machine learning, software architecture, and product innovation. His work blends analytical depth with practical execution, with an emphasis on building systems that are technically rigorous, user-centered, and ready for real-world deployment.
+          </p>
+          <p class="mt-4 text-base leading-8 text-slate-400 sm:text-lg">
+            This template uses placeholder content that can be quickly updated with real publications, experience, projects, and contact links while preserving a polished and professional presentation.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a> · LinkedIn: <a href="https://www.linkedin.com/in/your-handle" target="_blank">your-handle</a></p>
+    <!-- Experience Section -->
+    <section id="experience" class="px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-indigo-300">Experience</p>
+            <h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">Professional experience across engineering, research, and delivery.</h2>
+          </div>
+          <p class="max-w-xl text-sm leading-7 text-slate-400">
+            Sample entries below are designed as editable placeholders and demonstrate a premium timeline layout for career highlights.
+          </p>
+        </div>
+
+        <div class="mt-12 space-y-8 border-l border-white/10 pl-6 sm:pl-10">
+          <article class="relative rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card">
+            <span class="absolute -left-[2.15rem] top-8 h-4 w-4 rounded-full border-4 border-slate-950 bg-indigo-500 sm:-left-[2.7rem]"></span>
+            <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-300">Apex Intelligence Labs</p>
+                <h3 class="mt-2 text-2xl font-semibold text-white">Senior Research Engineer</h3>
+              </div>
+              <p class="text-sm font-medium text-slate-400">2023 - Present</p>
+            </div>
+            <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-400">
+              <li>Led the design of machine learning pipelines for experimentation, evaluation, and production deployment.</li>
+              <li>Built internal platforms that improved research reproducibility and reduced iteration time for cross-functional teams.</li>
+              <li>Partnered with product leadership to translate research prototypes into scalable software capabilities.</li>
+            </ul>
+          </article>
+
+          <article class="relative rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card">
+            <span class="absolute -left-[2.15rem] top-8 h-4 w-4 rounded-full border-4 border-slate-950 bg-indigo-500 sm:-left-[2.7rem]"></span>
+            <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-300">Nova Systems</p>
+                <h3 class="mt-2 text-2xl font-semibold text-white">Lead Software Developer</h3>
+              </div>
+              <p class="text-sm font-medium text-slate-400">2020 - 2023</p>
+            </div>
+            <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-400">
+              <li>Architected enterprise-grade web platforms with a focus on maintainability, observability, and performance.</li>
+              <li>Mentored engineering teams on front-end quality, code reviews, and modern component design practices.</li>
+              <li>Delivered data-intensive features that supported executive decision-making and client reporting.</li>
+            </ul>
+          </article>
+
+          <article class="relative rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card">
+            <span class="absolute -left-[2.15rem] top-8 h-4 w-4 rounded-full border-4 border-slate-950 bg-indigo-500 sm:-left-[2.7rem]"></span>
+            <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+              <div>
+                <p class="text-sm font-semibold uppercase tracking-[0.24em] text-indigo-300">Institute for Computational Discovery</p>
+                <h3 class="mt-2 text-2xl font-semibold text-white">Research Associate</h3>
+              </div>
+              <p class="text-sm font-medium text-slate-400">2017 - 2020</p>
+            </div>
+            <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-400">
+              <li>Conducted applied research in predictive modelling, data systems, and human-centered software evaluation.</li>
+              <li>Published technical findings and contributed to collaborative studies across academic and industry settings.</li>
+              <li>Developed visualization tools to communicate complex results to technical and non-technical stakeholders.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-indigo-300">Research Works</p>
+          <h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">Selected publications and ongoing research directions.</h2>
+        </div>
+
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <article class="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
+            <p class="text-sm font-medium text-indigo-300">Journal of Intelligent Systems • 2025</p>
+            <h3 class="mt-3 text-xl font-semibold text-white">Adaptive Retrieval Pipelines for Multimodal Knowledge Systems</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-400">
+              Explores a retrieval framework that combines semantic ranking and structured context assembly for higher precision across enterprise knowledge domains.
+            </p>
+            <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-200 transition group-hover:text-white" aria-label="View paper Adaptive Retrieval Pipelines for Multimodal Knowledge Systems">
+              View Paper
+              <i data-lucide="external-link" class="h-4 w-4"></i>
+            </a>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
+            <p class="text-sm font-medium text-indigo-300">Computing Research Review • 2024</p>
+            <h3 class="mt-3 text-xl font-semibold text-white">Human-Centered Evaluation Strategies for AI-Assisted Developer Tools</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-400">
+              Presents a practical evaluation model for measuring usability, trust, and task completion quality in AI-supported software workflows.
+            </p>
+            <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-200 transition group-hover:text-white" aria-label="View paper Human-Centered Evaluation Strategies for AI-Assisted Developer Tools">
+              View Paper
+              <i data-lucide="external-link" class="h-4 w-4"></i>
+            </a>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
+            <p class="text-sm font-medium text-indigo-300">Applied Data Science Letters • 2023</p>
+            <h3 class="mt-3 text-xl font-semibold text-white">Scalable Experimentation Patterns for Production Machine Learning</h3>
+            <p class="mt-4 text-sm leading-7 text-slate-400">
+              Describes reproducible experimentation practices that align model iteration, infrastructure governance, and business-focused delivery metrics.
+            </p>
+            <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-200 transition group-hover:text-white" aria-label="View paper Scalable Experimentation Patterns for Production Machine Learning">
+              View Paper
+              <i data-lucide="external-link" class="h-4 w-4"></i>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div class="max-w-3xl">
+            <p class="text-sm font-semibold uppercase tracking-[0.28em] text-indigo-300">Projects</p>
+            <h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">Selected projects spanning product development and applied research engineering.</h2>
+          </div>
+          <p class="max-w-xl text-sm leading-7 text-slate-400">
+            Replace these placeholder projects with your own repositories, demos, or case studies when you are ready.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          <article class="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl font-semibold text-white">InsightFlow Analytics</h3>
+              <a href="#" class="text-slate-400 transition hover:text-white" aria-label="View InsightFlow Analytics on GitHub">
+                <i data-lucide="github" class="h-5 w-5"></i>
+              </a>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">React</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Python</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">PostgreSQL</span>
+            </div>
+            <p class="mt-5 text-sm leading-7 text-slate-400">
+              A decision-support platform for executive reporting, predictive metrics, and operational analytics across distributed teams.
+            </p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl font-semibold text-white">ResearchOps Studio</h3>
+              <a href="#" class="text-slate-400 transition hover:text-white" aria-label="View ResearchOps Studio on GitHub">
+                <i data-lucide="github" class="h-5 w-5"></i>
+              </a>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Next.js</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">TypeScript</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Docker</span>
+            </div>
+            <p class="mt-5 text-sm leading-7 text-slate-400">
+              An internal portal for experiment tracking, publication workflows, and cross-team coordination in research-driven environments.
+            </p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl font-semibold text-white">SignalForge AI</h3>
+              <a href="#" class="text-slate-400 transition hover:text-white" aria-label="View SignalForge AI on GitHub">
+                <i data-lucide="github" class="h-5 w-5"></i>
+              </a>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">PyTorch</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">FastAPI</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Redis</span>
+            </div>
+            <p class="mt-5 text-sm leading-7 text-slate-400">
+              A modular inference service for ranking, summarization, and recommendation workflows in domain-specific applications.
+            </p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl font-semibold text-white">Atlas Knowledge Graph</h3>
+              <a href="#" class="text-slate-400 transition hover:text-white" aria-label="View Atlas Knowledge Graph on GitHub">
+                <i data-lucide="github" class="h-5 w-5"></i>
+              </a>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Neo4j</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Node.js</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">GraphQL</span>
+            </div>
+            <p class="mt-5 text-sm leading-7 text-slate-400">
+              A semantic data platform designed to connect organizational knowledge, research assets, and decision intelligence.
+            </p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl font-semibold text-white">Precision Review Engine</h3>
+              <a href="#" class="text-slate-400 transition hover:text-white" aria-label="View Precision Review Engine on GitHub">
+                <i data-lucide="github" class="h-5 w-5"></i>
+              </a>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Vue</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Go</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Elastic</span>
+            </div>
+            <p class="mt-5 text-sm leading-7 text-slate-400">
+              A document intelligence workflow for structured review, annotation, and insight extraction in regulated environments.
+            </p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.05]">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-xl font-semibold text-white">Studio Metrics Console</h3>
+              <a href="#" class="text-slate-400 transition hover:text-white" aria-label="View Studio Metrics Console on GitHub">
+                <i data-lucide="github" class="h-5 w-5"></i>
+              </a>
+            </div>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Tailwind</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">D3.js</span>
+              <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300">Supabase</span>
+            </div>
+            <p class="mt-5 text-sm leading-7 text-slate-400">
+              A premium analytics interface for monitoring platform health, research throughput, and product adoption signals.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.28em] text-indigo-300">Skills</p>
+          <h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">Core capabilities organized for quick scanning.</h2>
+        </div>
+
+        <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card">
+            <h3 class="text-lg font-semibold text-white">Languages</h3>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Python</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">JavaScript</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">TypeScript</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">SQL</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Bash</span>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card">
+            <h3 class="text-lg font-semibold text-white">Frameworks</h3>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">React</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Next.js</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">FastAPI</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Node.js</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Tailwind CSS</span>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card">
+            <h3 class="text-lg font-semibold text-white">Research</h3>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Applied AI</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Evaluation Design</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Experimentation</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Knowledge Systems</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Data Analysis</span>
+            </div>
+          </article>
+
+          <article class="rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-card">
+            <h3 class="text-lg font-semibold text-white">Tools</h3>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">GitHub</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Docker</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Linux</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Figma</span>
+              <span class="rounded-full bg-white/5 px-3 py-2 text-sm text-slate-300">Jupyter</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-5xl rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.05] to-indigo-500/10 p-8 shadow-premium sm:p-12">
+        <p class="text-sm font-semibold uppercase tracking-[0.28em] text-indigo-300">Contact</p>
+        <h2 class="mt-4 text-3xl font-semibold text-white sm:text-4xl">Open to thoughtful collaboration, research partnerships, and product conversations.</h2>
+        <p class="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
+          For research collaborations, consulting engagements, or full-time opportunities, feel free to get in touch. Placeholder details below are easy to update with your real contact information.
+        </p>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a
+            href="mailto:babu.pallam@example.com"
+            class="inline-flex items-center justify-center gap-2 rounded-2xl bg-indigo-500 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:bg-indigo-400 hover:shadow-lg hover:shadow-indigo-500/30"
+          >
+            <i data-lucide="mail" class="h-4 w-4"></i>
+            babu.pallam@example.com
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 py-3 text-sm font-semibold text-slate-100 transition duration-300 hover:border-white/20 hover:bg-white/10"
+          >
+            Schedule a Conversation
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>© <span id="y"></span> Babu Pallam</footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <!-- Footer -->
+  <footer class="px-4 pb-10 pt-4 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 border-t border-white/10 pt-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
+      <div>
+        <p class="font-medium text-slate-200">Babu Pallam</p>
+        <p class="mt-1">Researcher and Developer focused on software innovation and practical intelligence.</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="#" class="transition hover:text-white" aria-label="LinkedIn profile">
+          <i data-lucide="linkedin" class="h-5 w-5"></i>
+        </a>
+        <a href="#" class="transition hover:text-white" aria-label="GitHub profile">
+          <i data-lucide="github" class="h-5 w-5"></i>
+        </a>
+        <a href="mailto:babu.pallam@example.com" class="transition hover:text-white" aria-label="Send email">
+          <i data-lucide="mail" class="h-5 w-5"></i>
+        </a>
+      </div>
+      <p>Built with GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    lucide.createIcons();
+  </script>
 </body>
 </html>
