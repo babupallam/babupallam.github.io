@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Replace: Name -->
   <title>Babu Pallam | Researcher & Developer</title>
   <meta
     name="description"
@@ -52,26 +53,27 @@
 <body class="bg-slate-950 font-sans text-slate-100 antialiased selection:bg-indigo-500/30 selection:text-white">
   <div class="fixed inset-0 -z-20 bg-slate-950"></div>
   <div class="fixed inset-0 -z-10 bg-hero-mesh opacity-90"></div>
-  <div class="fixed inset-x-0 top-0 -z-10 h-[38rem] bg-gradient-to-b from-white/[0.04] via-transparent to-transparent"></div>
+  <div class="fixed inset-x-0 top-0 -z-10 h-[32rem] bg-gradient-to-b from-white/[0.04] via-transparent to-transparent sm:h-[38rem]"></div>
 
   <!-- Navigation -->
-  <header class="sticky top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
+  <header class="sticky top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-4 lg:px-8">
     <nav
-      class="mx-auto flex max-w-7xl items-center justify-between rounded-[1.4rem] border border-white/10 bg-slate-900/55 px-4 py-3 shadow-glow backdrop-blur-2xl sm:px-6"
+      class="mx-auto flex max-w-7xl items-center justify-between rounded-[1.2rem] border border-white/10 bg-slate-900/55 px-3.5 py-3 shadow-glow backdrop-blur-2xl sm:rounded-[1.4rem] sm:px-6"
       aria-label="Primary"
     >
-      <a href="#home" class="flex items-center gap-3">
-        <span class="inline-flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.07] text-sm font-semibold text-white shadow-inner shadow-white/10">BP</span>
-        <div class="hidden sm:block">
-          <p class="text-[11px] font-semibold uppercase tracking-premium text-slate-500">Portfolio</p>
-          <p class="text-sm font-medium text-slate-100">Babu Pallam</p>
+      <a href="#home" class="flex min-w-0 items-center gap-3">
+        <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.07] text-sm font-semibold text-white shadow-inner shadow-white/10">BP</span>
+        <div class="min-w-0 sm:block">
+          <p class="text-[10px] font-semibold uppercase tracking-premium text-slate-500 sm:text-[11px]">Portfolio</p>
+          <!-- Replace: Name -->
+          <p class="truncate text-sm font-medium text-slate-100">Babu Pallam</p>
         </div>
       </a>
 
       <button
         id="menu-toggle"
         type="button"
-        class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.05] p-2 text-slate-200 transition duration-300 hover:border-white/20 hover:bg-white/[0.08] lg:hidden"
+        class="inline-flex shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.05] p-2 text-slate-200 transition duration-300 hover:border-white/20 hover:bg-white/[0.08] lg:hidden"
         aria-expanded="false"
         aria-controls="mobile-menu"
         aria-label="Toggle navigation menu"
@@ -91,7 +93,7 @@
 
     <div
       id="mobile-menu"
-      class="mx-auto mt-3 hidden max-w-7xl rounded-[1.4rem] border border-white/10 bg-slate-900/88 p-3 shadow-panel backdrop-blur-2xl lg:hidden"
+      class="mx-auto mt-2 hidden max-w-7xl rounded-[1.2rem] border border-white/10 bg-slate-900/90 p-2.5 shadow-panel backdrop-blur-2xl lg:hidden"
     >
       <div class="flex flex-col gap-1">
         <a class="rounded-xl px-3 py-3 text-sm text-slate-300 transition duration-300 hover:bg-white/[0.05] hover:text-white" href="#about">About</a>
@@ -106,29 +108,31 @@
 
   <main id="home">
     <!-- Hero Section -->
-    <section class="px-4 pb-24 pt-14 sm:px-6 sm:pb-28 sm:pt-18 lg:px-8 lg:pb-36 lg:pt-24">
-      <div class="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[minmax(0,1.18fr)_minmax(360px,0.82fr)] lg:gap-20">
+    <section class="px-3 pb-20 pt-10 sm:px-6 sm:pb-28 sm:pt-16 lg:px-8 lg:pb-36 lg:pt-24">
+      <div class="mx-auto grid max-w-7xl gap-8 sm:gap-10 lg:grid-cols-[minmax(0,1.18fr)_minmax(360px,0.82fr)] lg:gap-20">
         <div class="max-w-4xl">
-          <span class="inline-flex items-center rounded-full border border-indigo-400/20 bg-indigo-500/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-premium text-indigo-200">
+          <span class="inline-flex max-w-full items-center rounded-full border border-indigo-400/20 bg-indigo-500/10 px-3.5 py-2 text-[10px] font-semibold uppercase tracking-premium text-indigo-200 sm:px-4 sm:text-[11px]">
             Software Innovation & Research
           </span>
-          <h1 class="mt-8 max-w-4xl text-4xl font-semibold leading-[0.98] tracking-[-0.04em] text-white sm:text-5xl lg:text-[5.25rem]">
+          <!-- Replace: Headline -->
+          <h1 class="mt-6 max-w-4xl text-[2.35rem] font-semibold leading-[1.02] tracking-[-0.04em] text-white sm:mt-8 sm:text-5xl lg:text-[5.25rem]">
             Building intelligent software with research depth and product-grade execution.
           </h1>
-          <p class="mt-8 max-w-2xl text-base leading-8 text-slate-400 sm:text-[1.05rem]">
+          <p class="mt-6 max-w-2xl text-[0.96rem] leading-7 text-slate-400 sm:mt-8 sm:text-[1.05rem] sm:leading-8">
             Babu Pallam is a researcher and developer creating thoughtful digital systems across applied AI, software engineering, and knowledge-driven product design. This template is structured to present serious work with the calm confidence of a premium landing page.
           </p>
 
-          <div class="mt-11 flex flex-col gap-4 sm:flex-row">
+          <div class="mt-9 grid gap-3 sm:mt-11 sm:flex sm:flex-row sm:gap-4">
             <a
               href="#projects"
-              class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-b from-indigo-400 to-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-button transition duration-300 hover:-translate-y-0.5 hover:from-indigo-300 hover:to-indigo-500"
+              class="inline-flex w-full items-center justify-center rounded-2xl bg-gradient-to-b from-indigo-400 to-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-button transition duration-300 hover:-translate-y-0.5 hover:from-indigo-300 hover:to-indigo-500 sm:w-auto sm:min-w-[170px]"
             >
               View Portfolio
             </a>
+            <!-- Replace: Resume Link -->
             <a
               href="#"
-              class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/[0.05] px-6 py-3.5 text-sm font-semibold text-slate-100 shadow-inner shadow-white/10 transition duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.08]"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-white/10 bg-white/[0.05] px-6 py-3.5 text-sm font-semibold text-slate-100 shadow-inner shadow-white/10 transition duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.08] sm:w-auto sm:min-w-[170px]"
               aria-label="Download resume"
             >
               <i data-lucide="download" class="h-4 w-4"></i>
@@ -136,16 +140,16 @@
             </a>
           </div>
 
-          <div class="mt-16 grid gap-4 sm:grid-cols-3">
-            <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045]">
+          <div class="mt-12 grid gap-3 sm:mt-16 sm:gap-4 sm:grid-cols-3">
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045] sm:rounded-[1.75rem] sm:p-6">
               <p class="text-2xl font-semibold tracking-tight text-white">8+</p>
               <p class="mt-2 text-sm leading-6 text-slate-400">Years of software delivery across engineering and research environments.</p>
             </div>
-            <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045]">
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045] sm:rounded-[1.75rem] sm:p-6">
               <p class="text-2xl font-semibold tracking-tight text-white">12+</p>
               <p class="mt-2 text-sm leading-6 text-slate-400">Cross-functional initiatives spanning product, data, and intelligent systems.</p>
             </div>
-            <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045]">
+            <div class="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045] sm:rounded-[1.75rem] sm:p-6">
               <p class="text-2xl font-semibold tracking-tight text-white">4</p>
               <p class="mt-2 text-sm leading-6 text-slate-400">Core disciplines: engineering, research, design thinking, and analytics.</p>
             </div>
@@ -153,20 +157,20 @@
         </div>
 
         <aside class="lg:pt-8">
-          <div class="rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 shadow-panel backdrop-blur-xl sm:p-6">
-            <div class="rounded-[1.7rem] border border-white/10 bg-panel-glow p-6 sm:p-7">
+          <div class="rounded-[1.6rem] border border-white/10 bg-white/[0.04] p-4 shadow-panel backdrop-blur-xl sm:rounded-[2rem] sm:p-6">
+            <div class="rounded-[1.35rem] border border-white/10 bg-panel-glow p-5 sm:rounded-[1.7rem] sm:p-7">
               <div class="flex items-start justify-between gap-4">
                 <div>
-                  <p class="text-[11px] font-semibold uppercase tracking-premium text-slate-500">Current Focus</p>
-                  <h2 class="mt-3 text-2xl font-semibold leading-tight tracking-tight text-white">Research-led engineering for intelligent product experiences.</h2>
+                  <p class="text-[10px] font-semibold uppercase tracking-premium text-slate-500 sm:text-[11px]">Current Focus</p>
+                  <h2 class="mt-3 text-[1.45rem] font-semibold leading-tight tracking-tight text-white sm:text-2xl">Research-led engineering for intelligent product experiences.</h2>
                 </div>
-                <span class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">Open</span>
+                <span class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-[11px] font-medium text-emerald-300 sm:text-xs">Open</span>
               </div>
 
-              <div class="mt-8 space-y-4">
+              <div class="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
                 <div class="rounded-2xl border border-white/10 bg-slate-950/45 p-4 transition duration-300 hover:border-white/15 hover:bg-slate-950/60">
-                  <div class="flex gap-4">
-                    <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-300">
+                  <div class="flex items-start gap-4">
+                    <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-300 sm:h-11 sm:w-11">
                       <i data-lucide="brain-circuit" class="h-5 w-5"></i>
                     </span>
                     <div>
@@ -177,8 +181,8 @@
                 </div>
 
                 <div class="rounded-2xl border border-white/10 bg-slate-950/45 p-4 transition duration-300 hover:border-white/15 hover:bg-slate-950/60">
-                  <div class="flex gap-4">
-                    <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-300">
+                  <div class="flex items-start gap-4">
+                    <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-300 sm:h-11 sm:w-11">
                       <i data-lucide="flask-conical" class="h-5 w-5"></i>
                     </span>
                     <div>
@@ -189,8 +193,8 @@
                 </div>
 
                 <div class="rounded-2xl border border-white/10 bg-slate-950/45 p-4 transition duration-300 hover:border-white/15 hover:bg-slate-950/60">
-                  <div class="flex gap-4">
-                    <span class="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-300">
+                  <div class="flex items-start gap-4">
+                    <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-300 sm:h-11 sm:w-11">
                       <i data-lucide="layout-dashboard" class="h-5 w-5"></i>
                     </span>
                     <div>
@@ -207,20 +211,20 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <section id="about" class="px-3 py-18 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
       <div class="mx-auto max-w-7xl">
-        <div class="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start lg:gap-14">
+        <div class="grid gap-8 sm:gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start lg:gap-14">
           <div class="pt-1">
-            <p class="text-[11px] font-semibold uppercase tracking-premium text-indigo-300">About</p>
-            <h2 class="mt-4 max-w-lg text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+            <p class="text-[10px] font-semibold uppercase tracking-premium text-indigo-300 sm:text-[11px]">About</p>
+            <h2 class="mt-4 max-w-lg text-[1.9rem] font-semibold leading-tight tracking-tight text-white sm:text-4xl">
               A calm, research-oriented profile designed for credibility and clarity.
             </h2>
           </div>
-          <div class="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 shadow-lift backdrop-blur-sm transition duration-300 hover:border-white/15 hover:bg-white/[0.04] sm:p-10 lg:p-12">
-            <p class="text-base leading-8 text-slate-300 sm:text-lg">
+          <div class="rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift backdrop-blur-sm transition duration-300 hover:border-white/15 hover:bg-white/[0.04] sm:rounded-[2rem] sm:p-10 lg:p-12">
+            <p class="text-[0.98rem] leading-7 text-slate-300 sm:text-lg sm:leading-8">
               Babu Pallam is a researcher and software developer with a strong interest in applied machine learning, systems thinking, and digital product innovation. His work bridges analytical rigor with engineering execution, helping transform complex ideas into dependable software and meaningful user experiences.
             </p>
-            <p class="mt-5 text-base leading-8 text-slate-400 sm:text-lg">
+            <p class="mt-5 text-[0.98rem] leading-7 text-slate-400 sm:text-lg sm:leading-8">
               This section uses polished placeholder copy that is intentionally easy to replace later with specific education details, domain expertise, awards, or professional positioning.
             </p>
           </div>
@@ -229,58 +233,59 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <section id="experience" class="px-3 py-18 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
       <div class="mx-auto max-w-7xl">
         <div class="max-w-3xl">
-          <p class="text-[11px] font-semibold uppercase tracking-premium text-indigo-300">Experience</p>
-          <h2 class="mt-4 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+          <p class="text-[10px] font-semibold uppercase tracking-premium text-indigo-300 sm:text-[11px]">Experience</p>
+          <h2 class="mt-4 text-[1.9rem] font-semibold leading-tight tracking-tight text-white sm:text-4xl">
             Professional experience presented with the polish of an executive profile.
           </h2>
         </div>
 
-        <div class="mt-16 space-y-8 border-l border-white/10 pl-5 sm:pl-8 lg:pl-10">
-          <article class="relative rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.05] sm:p-8">
-            <span class="absolute -left-[1.65rem] top-10 h-3.5 w-3.5 rounded-full border-4 border-slate-950 bg-indigo-500 sm:-left-[2.15rem]"></span>
-            <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+        <div class="mt-12 space-y-6 border-l border-white/10 pl-4 sm:mt-16 sm:space-y-8 sm:pl-8 lg:pl-10">
+          <!-- Replace: Experience Entries -->
+          <article class="relative rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.05] sm:rounded-[1.9rem] sm:p-8">
+            <span class="absolute -left-[1.15rem] top-8 h-3.5 w-3.5 rounded-full border-4 border-slate-950 bg-indigo-500 sm:-left-[2.15rem] sm:top-10"></span>
+            <div class="flex flex-col gap-3 sm:gap-4 md:flex-row md:items-start md:justify-between">
               <div>
-                <p class="text-[11px] font-semibold uppercase tracking-premium text-indigo-300">Apex Intelligence Labs</p>
-                <h3 class="mt-3 text-[1.7rem] font-semibold tracking-tight text-white">Senior Research Engineer</h3>
+                <p class="text-[10px] font-semibold uppercase tracking-premium text-indigo-300 sm:text-[11px]">Apex Intelligence Labs</p>
+                <h3 class="mt-2 text-[1.45rem] font-semibold tracking-tight text-white sm:mt-3 sm:text-[1.7rem]">Senior Research Engineer</h3>
               </div>
-              <p class="pt-1 text-sm font-medium text-slate-400">2023 - Present</p>
+              <p class="pt-0.5 text-sm font-medium text-slate-400">2023 - Present</p>
             </div>
-            <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-400">
+            <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-400 sm:mt-6">
               <li>Led the design of machine learning workflows for experimentation, evaluation, and production deployment.</li>
               <li>Built internal research infrastructure that improved reproducibility and shortened iteration cycles for multidisciplinary teams.</li>
               <li>Partnered with product leadership to transform early-stage prototypes into scalable platform capabilities.</li>
             </ul>
           </article>
 
-          <article class="relative rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.05] sm:p-8">
-            <span class="absolute -left-[1.65rem] top-10 h-3.5 w-3.5 rounded-full border-4 border-slate-950 bg-indigo-500 sm:-left-[2.15rem]"></span>
-            <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+          <article class="relative rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.05] sm:rounded-[1.9rem] sm:p-8">
+            <span class="absolute -left-[1.15rem] top-8 h-3.5 w-3.5 rounded-full border-4 border-slate-950 bg-indigo-500 sm:-left-[2.15rem] sm:top-10"></span>
+            <div class="flex flex-col gap-3 sm:gap-4 md:flex-row md:items-start md:justify-between">
               <div>
-                <p class="text-[11px] font-semibold uppercase tracking-premium text-indigo-300">Nova Systems</p>
-                <h3 class="mt-3 text-[1.7rem] font-semibold tracking-tight text-white">Lead Software Developer</h3>
+                <p class="text-[10px] font-semibold uppercase tracking-premium text-indigo-300 sm:text-[11px]">Nova Systems</p>
+                <h3 class="mt-2 text-[1.45rem] font-semibold tracking-tight text-white sm:mt-3 sm:text-[1.7rem]">Lead Software Developer</h3>
               </div>
-              <p class="pt-1 text-sm font-medium text-slate-400">2020 - 2023</p>
+              <p class="pt-0.5 text-sm font-medium text-slate-400">2020 - 2023</p>
             </div>
-            <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-400">
+            <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-400 sm:mt-6">
               <li>Architected enterprise-grade platforms with strong emphasis on maintainability, performance, and technical clarity.</li>
               <li>Guided front-end and platform teams on design systems, code quality, and consistent delivery practices.</li>
               <li>Delivered data-rich product experiences that supported operational visibility and executive decision-making.</li>
             </ul>
           </article>
 
-          <article class="relative rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.05] sm:p-8">
-            <span class="absolute -left-[1.65rem] top-10 h-3.5 w-3.5 rounded-full border-4 border-slate-950 bg-indigo-500 sm:-left-[2.15rem]"></span>
-            <div class="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+          <article class="relative rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.05] sm:rounded-[1.9rem] sm:p-8">
+            <span class="absolute -left-[1.15rem] top-8 h-3.5 w-3.5 rounded-full border-4 border-slate-950 bg-indigo-500 sm:-left-[2.15rem] sm:top-10"></span>
+            <div class="flex flex-col gap-3 sm:gap-4 md:flex-row md:items-start md:justify-between">
               <div>
-                <p class="text-[11px] font-semibold uppercase tracking-premium text-indigo-300">Institute for Computational Discovery</p>
-                <h3 class="mt-3 text-[1.7rem] font-semibold tracking-tight text-white">Research Associate</h3>
+                <p class="text-[10px] font-semibold uppercase tracking-premium text-indigo-300 sm:text-[11px]">Institute for Computational Discovery</p>
+                <h3 class="mt-2 text-[1.45rem] font-semibold tracking-tight text-white sm:mt-3 sm:text-[1.7rem]">Research Associate</h3>
               </div>
-              <p class="pt-1 text-sm font-medium text-slate-400">2017 - 2020</p>
+              <p class="pt-0.5 text-sm font-medium text-slate-400">2017 - 2020</p>
             </div>
-            <ul class="mt-6 space-y-3 text-sm leading-7 text-slate-400">
+            <ul class="mt-5 space-y-3 text-sm leading-7 text-slate-400 sm:mt-6">
               <li>Conducted applied research in predictive modeling, experimentation design, and human-centered software evaluation.</li>
               <li>Published collaborative findings and supported interdisciplinary studies across technical and academic environments.</li>
               <li>Developed analytical tools and dashboards to communicate complex results to diverse stakeholder groups.</li>
@@ -291,50 +296,51 @@
     </section>
 
     <!-- Research Section -->
-    <section id="research" class="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <section id="research" class="px-3 py-18 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
       <div class="mx-auto max-w-7xl">
         <div class="max-w-3xl">
-          <p class="text-[11px] font-semibold uppercase tracking-premium text-indigo-300">Research Works</p>
-          <h2 class="mt-4 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+          <p class="text-[10px] font-semibold uppercase tracking-premium text-indigo-300 sm:text-[11px]">Research Works</p>
+          <h2 class="mt-4 text-[1.9rem] font-semibold leading-tight tracking-tight text-white sm:text-4xl">
             Selected publications displayed with a clean editorial presentation.
           </h2>
         </div>
 
-        <div class="mt-16 grid gap-6 lg:grid-cols-3">
-          <article class="group rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:-translate-y-1 hover:border-white/15 hover:bg-white/[0.05] sm:p-7">
+        <div class="mt-12 grid gap-4 sm:mt-16 sm:gap-6 lg:grid-cols-3">
+          <!-- Replace: Research Entries -->
+          <article class="group rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:-translate-y-1 hover:border-white/15 hover:bg-white/[0.05] sm:rounded-[1.9rem] sm:p-7">
             <p class="text-sm font-medium text-indigo-300">Journal of Intelligent Systems</p>
             <h3 class="mt-3 text-xl font-semibold leading-snug tracking-tight text-white">Adaptive Retrieval Pipelines for Multimodal Knowledge Systems</h3>
             <p class="mt-2 text-sm text-slate-500">2025</p>
             <p class="mt-5 text-sm leading-7 text-slate-400">
               Explores semantic retrieval architectures that combine contextual ranking and structured evidence synthesis for more accurate knowledge access.
             </p>
-            <a href="#" class="mt-7 inline-flex items-center gap-2 text-sm font-medium text-slate-200 transition duration-300 group-hover:gap-3 group-hover:text-white" aria-label="View paper Adaptive Retrieval Pipelines for Multimodal Knowledge Systems">
+            <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-200 transition duration-300 group-hover:gap-3 group-hover:text-white sm:mt-7" aria-label="View paper Adaptive Retrieval Pipelines for Multimodal Knowledge Systems">
               View Paper
               <i data-lucide="external-link" class="h-4 w-4"></i>
             </a>
           </article>
 
-          <article class="group rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:-translate-y-1 hover:border-white/15 hover:bg-white/[0.05] sm:p-7">
+          <article class="group rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:-translate-y-1 hover:border-white/15 hover:bg-white/[0.05] sm:rounded-[1.9rem] sm:p-7">
             <p class="text-sm font-medium text-indigo-300">Computing Research Review</p>
             <h3 class="mt-3 text-xl font-semibold leading-snug tracking-tight text-white">Human-Centered Evaluation Strategies for AI-Assisted Developer Tools</h3>
             <p class="mt-2 text-sm text-slate-500">2024</p>
             <p class="mt-5 text-sm leading-7 text-slate-400">
               Presents a practical evaluation model for trust, usability, and outcome quality in AI-supported workflows for software teams.
             </p>
-            <a href="#" class="mt-7 inline-flex items-center gap-2 text-sm font-medium text-slate-200 transition duration-300 group-hover:gap-3 group-hover:text-white" aria-label="View paper Human-Centered Evaluation Strategies for AI-Assisted Developer Tools">
+            <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-200 transition duration-300 group-hover:gap-3 group-hover:text-white sm:mt-7" aria-label="View paper Human-Centered Evaluation Strategies for AI-Assisted Developer Tools">
               View Paper
               <i data-lucide="external-link" class="h-4 w-4"></i>
             </a>
           </article>
 
-          <article class="group rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:-translate-y-1 hover:border-white/15 hover:bg-white/[0.05] sm:p-7">
+          <article class="group rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:-translate-y-1 hover:border-white/15 hover:bg-white/[0.05] sm:rounded-[1.9rem] sm:p-7">
             <p class="text-sm font-medium text-indigo-300">Applied Data Science Letters</p>
             <h3 class="mt-3 text-xl font-semibold leading-snug tracking-tight text-white">Scalable Experimentation Patterns for Production Machine Learning</h3>
             <p class="mt-2 text-sm text-slate-500">2023</p>
             <p class="mt-5 text-sm leading-7 text-slate-400">
               Describes operational patterns for reproducible experimentation that align model development, governance, and delivery metrics.
             </p>
-            <a href="#" class="mt-7 inline-flex items-center gap-2 text-sm font-medium text-slate-200 transition duration-300 group-hover:gap-3 group-hover:text-white" aria-label="View paper Scalable Experimentation Patterns for Production Machine Learning">
+            <a href="#" class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-slate-200 transition duration-300 group-hover:gap-3 group-hover:text-white sm:mt-7" aria-label="View paper Scalable Experimentation Patterns for Production Machine Learning">
               View Paper
               <i data-lucide="external-link" class="h-4 w-4"></i>
             </a>
@@ -344,19 +350,20 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <section id="projects" class="px-3 py-18 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
       <div class="mx-auto max-w-7xl">
         <div class="max-w-3xl">
-          <p class="text-[11px] font-semibold uppercase tracking-premium text-indigo-300">Projects</p>
-          <h2 class="mt-4 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+          <p class="text-[10px] font-semibold uppercase tracking-premium text-indigo-300 sm:text-[11px]">Projects</p>
+          <h2 class="mt-4 text-[1.9rem] font-semibold leading-tight tracking-tight text-white sm:text-4xl">
             Product-minded work presented through concise, premium project cards.
           </h2>
         </div>
 
-        <div class="mt-16 grid gap-6 md:grid-cols-2">
-          <article class="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-7 shadow-lift transition duration-300 hover:-translate-y-1.5 hover:border-white/15 hover:bg-white/[0.05] sm:p-8">
+        <div class="mt-12 grid gap-4 sm:mt-16 sm:gap-6 md:grid-cols-2">
+          <!-- Replace: Project Entries -->
+          <article class="group rounded-[1.7rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:-translate-y-1 hover:border-white/15 hover:bg-white/[0.05] sm:rounded-[2rem] sm:p-8 sm:hover:-translate-y-1.5">
             <div class="flex items-start justify-between gap-4">
-              <h3 class="text-2xl font-semibold tracking-tight text-white">InsightFlow Analytics</h3>
+              <h3 class="text-[1.45rem] font-semibold tracking-tight text-white sm:text-2xl">InsightFlow Analytics</h3>
               <a href="#" class="rounded-xl border border-white/10 bg-white/[0.04] p-2 text-slate-400 transition duration-300 hover:border-white/15 hover:bg-white/[0.08] hover:text-white" aria-label="View InsightFlow Analytics on GitHub">
                 <i data-lucide="github" class="h-5 w-5"></i>
               </a>
@@ -371,9 +378,9 @@
             </p>
           </article>
 
-          <article class="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-7 shadow-lift transition duration-300 hover:-translate-y-1.5 hover:border-white/15 hover:bg-white/[0.05] sm:p-8">
+          <article class="group rounded-[1.7rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:-translate-y-1 hover:border-white/15 hover:bg-white/[0.05] sm:rounded-[2rem] sm:p-8 sm:hover:-translate-y-1.5">
             <div class="flex items-start justify-between gap-4">
-              <h3 class="text-2xl font-semibold tracking-tight text-white">ResearchOps Studio</h3>
+              <h3 class="text-[1.45rem] font-semibold tracking-tight text-white sm:text-2xl">ResearchOps Studio</h3>
               <a href="#" class="rounded-xl border border-white/10 bg-white/[0.04] p-2 text-slate-400 transition duration-300 hover:border-white/15 hover:bg-white/[0.08] hover:text-white" aria-label="View ResearchOps Studio on GitHub">
                 <i data-lucide="github" class="h-5 w-5"></i>
               </a>
@@ -388,9 +395,9 @@
             </p>
           </article>
 
-          <article class="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-7 shadow-lift transition duration-300 hover:-translate-y-1.5 hover:border-white/15 hover:bg-white/[0.05] sm:p-8">
+          <article class="group rounded-[1.7rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:-translate-y-1 hover:border-white/15 hover:bg-white/[0.05] sm:rounded-[2rem] sm:p-8 sm:hover:-translate-y-1.5">
             <div class="flex items-start justify-between gap-4">
-              <h3 class="text-2xl font-semibold tracking-tight text-white">SignalForge AI</h3>
+              <h3 class="text-[1.45rem] font-semibold tracking-tight text-white sm:text-2xl">SignalForge AI</h3>
               <a href="#" class="rounded-xl border border-white/10 bg-white/[0.04] p-2 text-slate-400 transition duration-300 hover:border-white/15 hover:bg-white/[0.08] hover:text-white" aria-label="View SignalForge AI on GitHub">
                 <i data-lucide="github" class="h-5 w-5"></i>
               </a>
@@ -405,9 +412,9 @@
             </p>
           </article>
 
-          <article class="group rounded-[2rem] border border-white/10 bg-white/[0.03] p-7 shadow-lift transition duration-300 hover:-translate-y-1.5 hover:border-white/15 hover:bg-white/[0.05] sm:p-8">
+          <article class="group rounded-[1.7rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:-translate-y-1 hover:border-white/15 hover:bg-white/[0.05] sm:rounded-[2rem] sm:p-8 sm:hover:-translate-y-1.5">
             <div class="flex items-start justify-between gap-4">
-              <h3 class="text-2xl font-semibold tracking-tight text-white">Atlas Knowledge Graph</h3>
+              <h3 class="text-[1.45rem] font-semibold tracking-tight text-white sm:text-2xl">Atlas Knowledge Graph</h3>
               <a href="#" class="rounded-xl border border-white/10 bg-white/[0.04] p-2 text-slate-400 transition duration-300 hover:border-white/15 hover:bg-white/[0.08] hover:text-white" aria-label="View Atlas Knowledge Graph on GitHub">
                 <i data-lucide="github" class="h-5 w-5"></i>
               </a>
@@ -426,17 +433,17 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+    <section id="skills" class="px-3 py-18 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
       <div class="mx-auto max-w-7xl">
         <div class="max-w-3xl">
-          <p class="text-[11px] font-semibold uppercase tracking-premium text-indigo-300">Skills</p>
-          <h2 class="mt-4 text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+          <p class="text-[10px] font-semibold uppercase tracking-premium text-indigo-300 sm:text-[11px]">Skills</p>
+          <h2 class="mt-4 text-[1.9rem] font-semibold leading-tight tracking-tight text-white sm:text-4xl">
             A categorized skills layout with clarity, restraint, and balance.
           </h2>
         </div>
 
-        <div class="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-          <article class="rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045]">
+        <div class="mt-12 grid gap-4 sm:mt-16 sm:gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045] sm:rounded-[1.9rem] sm:p-6">
             <h3 class="text-lg font-semibold tracking-tight text-white">Languages</h3>
             <div class="mt-5 flex flex-wrap gap-3">
               <span class="rounded-full bg-white/[0.05] px-3 py-2 text-sm text-slate-300">Python</span>
@@ -447,7 +454,7 @@
             </div>
           </article>
 
-          <article class="rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045]">
+          <article class="rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045] sm:rounded-[1.9rem] sm:p-6">
             <h3 class="text-lg font-semibold tracking-tight text-white">Frameworks</h3>
             <div class="mt-5 flex flex-wrap gap-3">
               <span class="rounded-full bg-white/[0.05] px-3 py-2 text-sm text-slate-300">React</span>
@@ -458,7 +465,7 @@
             </div>
           </article>
 
-          <article class="rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045]">
+          <article class="rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045] sm:rounded-[1.9rem] sm:p-6">
             <h3 class="text-lg font-semibold tracking-tight text-white">Research</h3>
             <div class="mt-5 flex flex-wrap gap-3">
               <span class="rounded-full bg-white/[0.05] px-3 py-2 text-sm text-slate-300">Applied AI</span>
@@ -469,7 +476,7 @@
             </div>
           </article>
 
-          <article class="rounded-[1.9rem] border border-white/10 bg-white/[0.03] p-6 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045]">
+          <article class="rounded-[1.6rem] border border-white/10 bg-white/[0.03] p-5 shadow-lift transition duration-300 hover:border-white/15 hover:bg-white/[0.045] sm:rounded-[1.9rem] sm:p-6">
             <h3 class="text-lg font-semibold tracking-tight text-white">Tools</h3>
             <div class="mt-5 flex flex-wrap gap-3">
               <span class="rounded-full bg-white/[0.05] px-3 py-2 text-sm text-slate-300">GitHub</span>
@@ -484,25 +491,26 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-      <div class="mx-auto max-w-6xl rounded-[2.1rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-indigo-500/10 p-8 shadow-panel backdrop-blur-xl sm:p-10 lg:p-12">
-        <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-12">
+    <section id="contact" class="px-3 py-18 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
+      <div class="mx-auto max-w-6xl rounded-[1.7rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-indigo-500/10 p-5 shadow-panel backdrop-blur-xl sm:rounded-[2.1rem] sm:p-10 lg:p-12">
+        <div class="grid gap-6 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-12">
           <div>
-            <p class="text-[11px] font-semibold uppercase tracking-premium text-indigo-300">Contact</p>
-            <h2 class="mt-4 max-w-2xl text-3xl font-semibold leading-tight tracking-tight text-white sm:text-4xl">
+            <p class="text-[10px] font-semibold uppercase tracking-premium text-indigo-300 sm:text-[11px]">Contact</p>
+            <h2 class="mt-4 max-w-2xl text-[1.9rem] font-semibold leading-tight tracking-tight text-white sm:text-4xl">
               Open to thoughtful collaboration, applied research opportunities, and product conversations.
             </h2>
-            <p class="mt-6 max-w-2xl text-base leading-8 text-slate-400 sm:text-lg">
+            <p class="mt-6 max-w-2xl text-[0.98rem] leading-7 text-slate-400 sm:text-lg sm:leading-8">
               Placeholder contact details below are easy to replace with your actual email, scheduling link, and social profiles when you are ready to publish.
             </p>
           </div>
-          <div class="rounded-[1.8rem] border border-white/10 bg-slate-950/40 p-6 shadow-lift backdrop-blur-sm transition duration-300 hover:border-white/15 hover:bg-slate-950/55">
+          <!-- Replace: Contact Details -->
+          <div class="rounded-[1.5rem] border border-white/10 bg-slate-950/40 p-5 shadow-lift backdrop-blur-sm transition duration-300 hover:border-white/15 hover:bg-slate-950/55 sm:rounded-[1.8rem] sm:p-6">
             <a
               href="mailto:babu.pallam@example.com"
-              class="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-b from-indigo-400 to-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-button transition duration-300 hover:-translate-y-0.5 hover:from-indigo-300 hover:to-indigo-500"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-b from-indigo-400 to-indigo-600 px-6 py-3.5 text-center text-sm font-semibold text-white shadow-button transition duration-300 hover:-translate-y-0.5 hover:from-indigo-300 hover:to-indigo-500"
             >
-              <i data-lucide="mail" class="h-4 w-4"></i>
-              babu.pallam@example.com
+              <i data-lucide="mail" class="h-4 w-4 shrink-0"></i>
+              <span class="truncate">babu.pallam@example.com</span>
             </a>
             <p class="mt-4 text-center text-sm leading-7 text-slate-400">
               Available for collaboration, consulting, and research-led software initiatives.
@@ -514,11 +522,12 @@
   </main>
 
   <!-- Footer -->
-  <footer class="px-4 pb-10 pt-4 sm:px-6 lg:px-8">
-    <div class="mx-auto flex max-w-7xl flex-col gap-6 border-t border-white/10 pt-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
+  <footer class="px-3 pb-10 pt-4 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-5 border-t border-white/10 pt-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between md:gap-6">
       <div>
+        <!-- Replace: Name -->
         <p class="font-medium text-slate-200">Babu Pallam</p>
-        <p class="mt-1">Researcher and developer focused on software innovation and research-led product thinking.</p>
+        <p class="mt-1 max-w-md">Researcher and developer focused on software innovation and research-led product thinking.</p>
       </div>
       <div class="flex items-center gap-3">
         <a href="#" class="rounded-xl border border-white/10 bg-white/[0.04] p-2 text-slate-400 transition duration-300 hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.08] hover:text-white" aria-label="LinkedIn profile">
