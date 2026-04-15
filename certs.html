@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Babu Pallam | Certifications</title>
+  <meta
+    name="description"
+    content="Verified certifications for Babu Pallam across AI engineering, cloud AI foundations, data platforms, and AI-enabled software delivery."
+  />
+  <script>
+    (() => {
+      const storageKey = "babu-pallam-theme";
+      let savedTheme = null;
+
+      try {
+        savedTheme = localStorage.getItem(storageKey);
+      } catch (error) {
+        savedTheme = null;
+      }
+
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme = savedTheme || (prefersDark ? "dark" : "light");
+
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            slate: {
+              950: "#0f172a"
+            },
+            indigo: {
+              500: "#6366f1"
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "sans-serif"]
+          },
+          boxShadow: {
+            glow: "0 0 0 1px rgba(255,255,255,0.05), 0 20px 60px rgba(2,6,23,0.38)",
+            panel: "0 24px 80px rgba(2,6,23,0.42)",
+            lift: "0 18px 40px rgba(2,6,23,0.30)",
+            button: "0 14px 34px rgba(99,102,241,0.28)"
+          },
+          letterSpacing: {
+            premium: "0.22em"
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    :root {
+      color-scheme: light;
+      --theme-backdrop:
+        radial-gradient(circle at 12% 18%, rgba(79, 70, 229, 0.12), transparent 24%),
+        radial-gradient(circle at 88% 12%, rgba(148, 163, 184, 0.16), transparent 22%),
+        radial-gradient(circle at 50% 100%, rgba(99, 102, 241, 0.10), transparent 28%);
+      --theme-top-glow: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(248, 250, 252, 0) 72%);
+      --theme-panel-glow: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72));
+      --focus-ring: rgba(79, 70, 229, 0.95);
+      --focus-shadow: rgba(79, 70, 229, 0.20);
+    }
+
+    html.dark {
+      color-scheme: dark;
+      --theme-backdrop:
+        radial-gradient(circle at 12% 18%, rgba(99, 102, 241, 0.18), transparent 24%),
+        radial-gradient(circle at 88% 12%, rgba(148, 163, 184, 0.09), transparent 20%),
+        radial-gradient(circle at 50% 100%, rgba(99, 102, 241, 0.10), transparent 28%);
+      --theme-top-glow: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0) 72%);
+      --theme-panel-glow: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+      --focus-ring: rgba(129, 140, 248, 0.98);
+      --focus-shadow: rgba(129, 140, 248, 0.30);
+    }
+
+    .theme-backdrop {
+      background-image: var(--theme-backdrop);
+    }
+
+    .theme-top-glow {
+      background: var(--theme-top-glow);
+    }
+
+    .theme-panel-glow {
+      background-image: var(--theme-panel-glow);
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 1rem;
+      top: 1rem;
+      z-index: 100;
+      transform: translateY(-220%);
+      border-radius: 9999px;
+      background: #4f46e5;
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 16px 32px rgba(79, 70, 229, 0.24);
+      transition: transform 160ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    :where(a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])):focus-visible {
+      outline: 2px solid var(--focus-ring);
+      outline-offset: 3px;
+      box-shadow: 0 0 0 6px var(--focus-shadow);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-900 antialiased transition-colors duration-300 selection:bg-indigo-500/20 selection:text-slate-950 dark:bg-slate-950 dark:text-slate-100 dark:selection:bg-indigo-500/30 dark:selection:text-white">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="fixed inset-0 -z-20 bg-slate-50 dark:bg-slate-950"></div>
+  <div class="theme-backdrop fixed inset-0 -z-10 opacity-90"></div>
+  <div class="theme-top-glow fixed inset-x-0 top-0 -z-10 h-[32rem] sm:h-[38rem]"></div>
+
+  <header class="sticky top-0 z-50 px-3 pt-3 sm:px-6 sm:pt-4 lg:px-8">
+    <nav
+      class="mx-auto flex max-w-7xl items-center justify-between rounded-[1.2rem] border border-slate-200/80 bg-white/75 px-3.5 py-3 shadow-[0_0_0_1px_rgba(15,23,42,0.04),0_18px_50px_rgba(15,23,42,0.10)] backdrop-blur-2xl transition-colors duration-300 dark:border-white/10 dark:bg-slate-900/55 dark:shadow-glow sm:rounded-[1.4rem] sm:px-6"
+      aria-label="Certification page navigation"
+    >
+      <a href="index.html#skills" class="flex min-w-0 items-center gap-3" aria-label="Back to the portfolio skills section">
+        <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-slate-200 bg-white text-sm font-semibold text-slate-950 shadow-inner shadow-slate-200/80 dark:border-white/10 dark:bg-white/[0.07] dark:text-white dark:shadow-white/10">BP</span>
+        <div class="min-w-0">
+          <p class="text-[10px] font-semibold uppercase tracking-premium text-slate-500 sm:text-[11px]">Verified Learning</p>
+          <p class="truncate text-sm font-medium text-slate-900 dark:text-slate-100">Babu Pallam Certifications</p>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a
+          href="index.html"
+          class="hidden items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-800 shadow-sm transition duration-300 hover:border-slate-300 hover:bg-slate-100 dark:border-white/10 dark:bg-white/[0.05] dark:text-slate-100 dark:hover:border-white/20 dark:hover:bg-white/[0.08] sm:inline-flex"
+          aria-label="Return to the portfolio home page"
+        >
+          <i data-lucide="arrow-left" class="h-4 w-4" aria-hidden="true"></i>
+          Back to Portfolio
+        </a>
+
+        <button
+          id="theme-toggle-mobile"
+          type="button"
+          class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 shadow-sm transition duration-300 hover:border-slate-300 hover:bg-slate-100 dark:border-white/10 dark:bg-white/[0.05] dark:text-slate-200 dark:hover:border-white/20 dark:hover:bg-white/[0.08] sm:hidden"
+          aria-label="Toggle theme"
+          aria-pressed="false"
+        >
+          <span id="theme-toggle-mobile-icon" aria-hidden="true"></span>
+        </button>
+
+        <button
+          id="theme-toggle-desktop"
+          type="button"
+          class="hidden items-center gap-2 rounded-xl border border-slate-200 bg-white px-3 py-2 text-slate-700 shadow-sm transition duration-300 hover:border-slate-300 hover:bg-slate-100 dark:border-white/10 dark:bg-white/[0.05] dark:text-slate-200 dark:hover:border-white/20 dark:hover:bg-white/[0.08] sm:inline-flex"
+          aria-label="Toggle theme"
+          aria-pressed="false"
+        >
+          <span id="theme-toggle-desktop-icon" aria-hidden="true"></span>
+          <span id="theme-toggle-text" class="text-sm font-medium">Theme</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section aria-labelledby="certifications-hero-heading" class="px-3 pb-16 pt-10 sm:px-6 sm:pb-20 sm:pt-16 lg:px-8 lg:pb-24 lg:pt-20">
+      <div class="mx-auto grid max-w-7xl gap-8 sm:gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(340px,0.9fr)] lg:gap-16">
+        <div class="max-w-4xl">
+          <span class="inline-flex max-w-full items-center rounded-full border border-indigo-500/20 bg-indigo-500/10 px-3.5 py-2 text-[10px] font-semibold uppercase tracking-premium text-indigo-700 sm:px-4 sm:text-[11px] dark:text-indigo-200">
+            Verified Certifications
+          </span>
+          <h1 id="certifications-hero-heading" class="mt-6 max-w-4xl text-[2.2rem] font-semibold leading-[1.02] tracking-[-0.04em] text-slate-950 sm:mt-8 sm:text-5xl dark:text-white lg:text-[4.65rem]">
+            Documented learning across AI engineering, cloud intelligence, and modern delivery systems.
+          </h1>
+          <p class="mt-6 max-w-2xl text-[0.96rem] leading-7 text-slate-700 sm:mt-8 sm:text-[1.05rem] sm:leading-8 dark:text-slate-400">
+            This page brings together certifications that reinforce Babu Pallam&rsquo;s research-led profile with verified capability in AI foundations, cloud data platforms, and AI-assisted software development. It is designed for recruiters and hiring teams who want a crisp view of applied, career-aligned learning.
+          </p>
+
+          <div class="mt-9 grid gap-3 sm:mt-11 sm:flex sm:flex-row sm:gap-4">
+            <a
+              href="index.html#skills"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-b from-indigo-400 to-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_34px_rgba(79,70,229,0.20)] transition duration-300 hover:-translate-y-0.5 hover:from-indigo-300 hover:to-indigo-500 dark:shadow-button sm:w-auto sm:min-w-[190px]"
+              aria-label="Return to the portfolio skills section"
+            >
+              <i data-lucide="arrow-left" class="h-4 w-4" aria-hidden="true"></i>
+              Back to Portfolio
+            </a>
+            <a
+              href="#certifications-grid"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-slate-200 bg-white/80 px-6 py-3.5 text-sm font-semibold text-slate-900 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white dark:border-white/10 dark:bg-white/[0.05] dark:text-slate-100 dark:shadow-inner dark:shadow-white/10 dark:hover:border-white/20 dark:hover:bg-white/[0.08] sm:w-auto sm:min-w-[190px]"
+              aria-label="Jump to certification cards"
+            >
+              View Certifications
+              <i data-lucide="arrow-down" class="h-4 w-4" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="mt-12 grid gap-3 sm:mt-16 sm:gap-4 sm:grid-cols-3">
+            <div class="rounded-[1.5rem] border border-slate-200 bg-white/75 p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:border-slate-300 hover:bg-white dark:border-white/10 dark:bg-white/[0.03] dark:shadow-lift dark:hover:border-white/15 dark:hover:bg-white/[0.045] sm:rounded-[1.75rem] sm:p-6">
+              <p class="text-2xl font-semibold tracking-tight text-slate-950 dark:text-white">4</p>
+              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">Career-aligned certifications spanning AI, cloud, data, and software delivery.</p>
+            </div>
+            <div class="rounded-[1.5rem] border border-slate-200 bg-white/75 p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:border-slate-300 hover:bg-white dark:border-white/10 dark:bg-white/[0.03] dark:shadow-lift dark:hover:border-white/15 dark:hover:bg-white/[0.045] sm:rounded-[1.75rem] sm:p-6">
+              <p class="text-2xl font-semibold tracking-tight text-slate-950 dark:text-white">4</p>
+              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">Recognized learning ecosystems represented: DataCamp, Microsoft, Oracle, and LinkedIn Learning.</p>
+            </div>
+            <div class="rounded-[1.5rem] border border-slate-200 bg-white/75 p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:border-slate-300 hover:bg-white dark:border-white/10 dark:bg-white/[0.03] dark:shadow-lift dark:hover:border-white/15 dark:hover:bg-white/[0.045] sm:rounded-[1.75rem] sm:p-6">
+              <p class="text-2xl font-semibold tracking-tight text-slate-950 dark:text-white">AI + Cloud</p>
+              <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">Balanced validation across applied machine learning depth and platform fluency.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="lg:pt-8" aria-label="Certification summary">
+          <div class="rounded-[1.6rem] border border-slate-200 bg-white/55 p-4 shadow-[0_24px_80px_rgba(15,23,42,0.10)] backdrop-blur-xl transition-colors duration-300 dark:border-white/10 dark:bg-white/[0.04] dark:shadow-panel sm:rounded-[2rem] sm:p-6">
+            <div class="theme-panel-glow rounded-[1.35rem] border border-slate-200/80 p-5 sm:rounded-[1.7rem] sm:p-7 dark:border-white/10">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-[10px] font-semibold uppercase tracking-premium text-slate-500 sm:text-[11px]">Why It Matters</p>
+                  <h2 class="mt-3 text-[1.45rem] font-semibold leading-tight tracking-tight text-slate-950 dark:text-white sm:text-2xl">A recruiter-friendly snapshot of validated capability.</h2>
+                </div>
+                <span class="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-[11px] font-medium text-emerald-700 dark:text-emerald-300 sm:text-xs">Verified</span>
+              </div>
+
+              <div class="mt-6 space-y-3 sm:mt-8 sm:space-y-4">
+                <div class="rounded-2xl border border-slate-200 bg-white/75 p-4 transition duration-300 hover:border-slate-300 hover:bg-white dark:border-white/10 dark:bg-slate-950/45 dark:hover:border-white/15 dark:hover:bg-slate-950/60">
+                  <div class="flex items-start gap-4">
+                    <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 sm:h-11 sm:w-11">
+                      <i data-lucide="brain-circuit" class="h-5 w-5" aria-hidden="true"></i>
+                    </span>
+                    <div>
+                      <h3 class="font-medium text-slate-950 dark:text-white">Applied AI Readiness</h3>
+                      <p class="mt-1 text-sm leading-7 text-slate-600 dark:text-slate-400">Signals practical familiarity with AI engineering concepts, platform services, and model-centric workflows.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 bg-white/75 p-4 transition duration-300 hover:border-slate-300 hover:bg-white dark:border-white/10 dark:bg-slate-950/45 dark:hover:border-white/15 dark:hover:bg-slate-950/60">
+                  <div class="flex items-start gap-4">
+                    <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 sm:h-11 sm:w-11">
+                      <i data-lucide="cloud" class="h-5 w-5" aria-hidden="true"></i>
+                    </span>
+                    <div>
+                      <h3 class="font-medium text-slate-950 dark:text-white">Cloud Platform Fluency</h3>
+                      <p class="mt-1 text-sm leading-7 text-slate-600 dark:text-slate-400">Reinforces comfort with data and AI foundations across enterprise-grade cloud ecosystems.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 bg-white/75 p-4 transition duration-300 hover:border-slate-300 hover:bg-white dark:border-white/10 dark:bg-slate-950/45 dark:hover:border-white/15 dark:hover:bg-slate-950/60">
+                  <div class="flex items-start gap-4">
+                    <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-300 sm:h-11 sm:w-11">
+                      <i data-lucide="workflow" class="h-5 w-5" aria-hidden="true"></i>
+                    </span>
+                    <div>
+                      <h3 class="font-medium text-slate-950 dark:text-white">Delivery Discipline</h3>
+                      <p class="mt-1 text-sm leading-7 text-slate-600 dark:text-slate-400">Supports a profile centered on turning research insight into dependable, production-ready outcomes.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="certifications-grid" aria-labelledby="certifications-grid-heading" class="px-3 pb-16 sm:px-6 sm:pb-20 lg:px-8 lg:pb-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <p class="text-[10px] font-semibold uppercase tracking-premium text-indigo-600 dark:text-indigo-300 sm:text-[11px]">Credential Portfolio</p>
+          <h2 id="certifications-grid-heading" class="mt-4 text-[1.9rem] font-semibold leading-tight tracking-tight text-slate-950 dark:text-white sm:text-4xl">
+            Certifications that reinforce AI engineering depth with cloud and delivery credibility.
+          </h2>
+        </div>
+
+        <ul role="list" class="mt-12 grid gap-4 sm:mt-16 sm:gap-6 lg:grid-cols-2">
+          <li>
+            <article aria-labelledby="cert-1-title" class="group flex h-full flex-col rounded-[1.7rem] border border-slate-200 bg-white/75 p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:bg-white dark:border-white/10 dark:bg-white/[0.03] dark:shadow-lift dark:hover:border-white/15 dark:hover:bg-white/[0.05] sm:rounded-[2rem] sm:p-8 sm:hover:-translate-y-1.5">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm font-medium text-indigo-600 dark:text-indigo-300">DataCamp</p>
+                  <h3 id="cert-1-title" class="mt-3 text-[1.45rem] font-semibold leading-snug tracking-tight text-slate-950 dark:text-white sm:text-2xl">AI Engineer Career Programme</h3>
+                </div>
+                <span class="rounded-full border border-slate-200 bg-white/85 px-3 py-1 text-[11px] font-medium text-slate-500 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400">Career Track</span>
+              </div>
+              <p class="mt-5 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                Demonstrates structured capability across model development, deployment-minded engineering, and the practical toolchain needed for modern AI product work.
+              </p>
+              <div class="mt-6">
+                <p class="text-xs font-semibold uppercase tracking-premium text-slate-500 dark:text-slate-400">Skills validated</p>
+                <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300" aria-label="Skills validated by AI Engineer Career Programme">
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>MLOps workflows and model lifecycle thinking</span></li>
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Model deployment foundations and evaluation awareness</span></li>
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Python-based AI engineering and experimentation</span></li>
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Generative AI workflow familiarity</span></li>
+                </ul>
+              </div>
+              <div class="mt-8 flex items-center justify-between gap-4 border-t border-slate-200 pt-6 dark:border-white/10">
+                <p class="text-sm text-slate-500 dark:text-slate-400">Issuer: DataCamp</p>
+                <button
+                  type="button"
+                  class="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-medium text-slate-500 opacity-80 transition duration-300 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400"
+                  disabled
+                  aria-label="View credential placeholder for AI Engineer Career Programme"
+                >
+                  View Credential
+                  <i data-lucide="external-link" class="h-4 w-4" aria-hidden="true"></i>
+                </button>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article aria-labelledby="cert-2-title" class="group flex h-full flex-col rounded-[1.7rem] border border-slate-200 bg-white/75 p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:bg-white dark:border-white/10 dark:bg-white/[0.03] dark:shadow-lift dark:hover:border-white/15 dark:hover:bg-white/[0.05] sm:rounded-[2rem] sm:p-8 sm:hover:-translate-y-1.5">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm font-medium text-indigo-600 dark:text-indigo-300">Microsoft</p>
+                  <h3 id="cert-2-title" class="mt-3 text-[1.45rem] font-semibold leading-snug tracking-tight text-slate-950 dark:text-white sm:text-2xl">Azure AI Fundamentals (AI-900)</h3>
+                </div>
+                <span class="rounded-full border border-slate-200 bg-white/85 px-3 py-1 text-[11px] font-medium text-slate-500 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400">Cloud AI</span>
+              </div>
+              <p class="mt-5 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                Validates foundational knowledge of Azure AI services and the practical categories of intelligent workloads used in enterprise environments.
+              </p>
+              <div class="mt-6">
+                <p class="text-xs font-semibold uppercase tracking-premium text-slate-500 dark:text-slate-400">Skills validated</p>
+                <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300" aria-label="Skills validated by Azure AI Fundamentals">
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Azure AI services and cloud AI workload awareness</span></li>
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Responsible AI and foundational governance concepts</span></li>
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Computer vision, NLP, and conversational AI basics</span></li>
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Generative AI concepts within an enterprise cloud context</span></li>
+                </ul>
+              </div>
+              <div class="mt-8 flex items-center justify-between gap-4 border-t border-slate-200 pt-6 dark:border-white/10">
+                <p class="text-sm text-slate-500 dark:text-slate-400">Issuer: Microsoft</p>
+                <button
+                  type="button"
+                  class="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-medium text-slate-500 opacity-80 transition duration-300 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400"
+                  disabled
+                  aria-label="View credential placeholder for Azure AI Fundamentals"
+                >
+                  View Credential
+                  <i data-lucide="external-link" class="h-4 w-4" aria-hidden="true"></i>
+                </button>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article aria-labelledby="cert-3-title" class="group flex h-full flex-col rounded-[1.7rem] border border-slate-200 bg-white/75 p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:bg-white dark:border-white/10 dark:bg-white/[0.03] dark:shadow-lift dark:hover:border-white/15 dark:hover:bg-white/[0.05] sm:rounded-[2rem] sm:p-8 sm:hover:-translate-y-1.5">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm font-medium text-indigo-600 dark:text-indigo-300">Oracle</p>
+                  <h3 id="cert-3-title" class="mt-3 text-[1.45rem] font-semibold leading-snug tracking-tight text-slate-950 dark:text-white sm:text-2xl">OCI Data Foundations</h3>
+                </div>
+                <span class="rounded-full border border-slate-200 bg-white/85 px-3 py-1 text-[11px] font-medium text-slate-500 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400">Data Platform</span>
+              </div>
+              <p class="mt-5 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                Establishes fluency in core cloud data concepts, preparing for the platform thinking required in analytics, pipelines, and AI-adjacent data infrastructure.
+              </p>
+              <div class="mt-6">
+                <p class="text-xs font-semibold uppercase tracking-premium text-slate-500 dark:text-slate-400">Skills validated</p>
+                <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300" aria-label="Skills validated by OCI Data Foundations">
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Cloud data infrastructure and service model awareness</span></li>
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Data warehousing and analytics foundations</span></li>
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Database and structured data management concepts</span></li>
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Enterprise data thinking for AI-ready systems</span></li>
+                </ul>
+              </div>
+              <div class="mt-8 flex items-center justify-between gap-4 border-t border-slate-200 pt-6 dark:border-white/10">
+                <p class="text-sm text-slate-500 dark:text-slate-400">Issuer: Oracle</p>
+                <button
+                  type="button"
+                  class="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-medium text-slate-500 opacity-80 transition duration-300 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400"
+                  disabled
+                  aria-label="View credential placeholder for OCI Data Foundations"
+                >
+                  View Credential
+                  <i data-lucide="external-link" class="h-4 w-4" aria-hidden="true"></i>
+                </button>
+              </div>
+            </article>
+          </li>
+
+          <li>
+            <article aria-labelledby="cert-4-title" class="group flex h-full flex-col rounded-[1.7rem] border border-slate-200 bg-white/75 p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:border-slate-300 hover:bg-white dark:border-white/10 dark:bg-white/[0.03] dark:shadow-lift dark:hover:border-white/15 dark:hover:bg-white/[0.05] sm:rounded-[2rem] sm:p-8 sm:hover:-translate-y-1.5">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm font-medium text-indigo-600 dark:text-indigo-300">LinkedIn Learning</p>
+                  <h3 id="cert-4-title" class="mt-3 text-[1.45rem] font-semibold leading-snug tracking-tight text-slate-950 dark:text-white sm:text-2xl">DevOps &amp; Software Development with AI</h3>
+                </div>
+                <span class="rounded-full border border-slate-200 bg-white/85 px-3 py-1 text-[11px] font-medium text-slate-500 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400">Delivery Systems</span>
+              </div>
+              <p class="mt-5 text-sm leading-7 text-slate-600 dark:text-slate-400">
+                Highlights a delivery-oriented mindset that combines software engineering discipline with AI-assisted development patterns and modern DevOps practice.
+              </p>
+              <div class="mt-6">
+                <p class="text-xs font-semibold uppercase tracking-premium text-slate-500 dark:text-slate-400">Skills validated</p>
+                <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300" aria-label="Skills validated by DevOps and Software Development with AI">
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>AI-assisted development workflows and coding productivity</span></li>
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>CI/CD and modern DevOps delivery principles</span></li>
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Automation-oriented software engineering habits</span></li>
+                  <li class="flex items-start gap-3"><i data-lucide="check" class="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" aria-hidden="true"></i><span>Production-minded collaboration and release thinking</span></li>
+                </ul>
+              </div>
+              <div class="mt-8 flex items-center justify-between gap-4 border-t border-slate-200 pt-6 dark:border-white/10">
+                <p class="text-sm text-slate-500 dark:text-slate-400">Issuer: LinkedIn Learning</p>
+                <button
+                  type="button"
+                  class="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-slate-100 px-4 py-2 text-sm font-medium text-slate-500 opacity-80 transition duration-300 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400"
+                  disabled
+                  aria-label="View credential placeholder for DevOps and Software Development with AI"
+                >
+                  View Credential
+                  <i data-lucide="external-link" class="h-4 w-4" aria-hidden="true"></i>
+                </button>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <div class="mt-8 rounded-[1.6rem] border border-slate-200 bg-white/75 p-5 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition duration-300 dark:border-white/10 dark:bg-white/[0.03] dark:shadow-lift sm:rounded-[1.9rem] sm:p-7">
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="text-[10px] font-semibold uppercase tracking-premium text-indigo-600 dark:text-indigo-300 sm:text-[11px]">Credential Notes</p>
+              <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-600 dark:text-slate-400">
+                Each card currently includes a styled credential placeholder button so verified URLs can be added later without changing the page structure or design language.
+              </p>
+            </div>
+            <a
+              href="index.html#contact"
+              class="inline-flex items-center gap-2 rounded-2xl border border-slate-200 bg-white/85 px-5 py-3 text-sm font-semibold text-slate-900 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white dark:border-white/10 dark:bg-white/[0.05] dark:text-slate-100 dark:hover:border-white/20 dark:hover:bg-white/[0.08]"
+              aria-label="Return to the portfolio contact section"
+            >
+              Contact Babu
+              <i data-lucide="arrow-right" class="h-4 w-4" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer aria-label="Site footer" class="px-3 pb-10 pt-4 sm:px-6 lg:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-5 border-t border-slate-200 pt-8 text-sm text-slate-500 dark:border-white/10 dark:text-slate-400 md:flex-row md:items-center md:justify-between md:gap-6">
+      <div>
+        <p class="font-medium text-slate-900 dark:text-slate-200">Babu Pallam</p>
+        <p class="mt-1 max-w-md">AI Engineer focused on multimodal AI, generative models, and production-ready intelligent systems.</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://linkedin.com/in/babupallam" target="_blank" rel="noopener noreferrer" class="rounded-xl border border-slate-200 bg-white/85 p-2 text-slate-600 transition duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white hover:text-slate-950 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400 dark:hover:border-white/20 dark:hover:bg-white/[0.08] dark:hover:text-white" aria-label="LinkedIn profile">
+          <i data-lucide="linkedin" class="h-5 w-5" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/babupallam" target="_blank" rel="noopener noreferrer" class="rounded-xl border border-slate-200 bg-white/85 p-2 text-slate-600 transition duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white hover:text-slate-950 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400 dark:hover:border-white/20 dark:hover:bg-white/[0.08] dark:hover:text-white" aria-label="GitHub profile">
+          <i data-lucide="github" class="h-5 w-5" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:babupallam@gmail.com" class="rounded-xl border border-slate-200 bg-white/85 p-2 text-slate-600 transition duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white hover:text-slate-950 dark:border-white/10 dark:bg-white/[0.04] dark:text-slate-400 dark:hover:border-white/20 dark:hover:bg-white/[0.08] dark:hover:text-white" aria-label="Send email">
+          <i data-lucide="mail" class="h-5 w-5" aria-hidden="true"></i>
+        </a>
+      </div>
+      <p>Built with GitHub Pages</p>
+    </div>
+  </footer>
+
+  <span id="theme-status" class="sr-only" aria-live="polite"></span>
+
+  <script>
+    const root = document.documentElement;
+    const storageKey = "babu-pallam-theme";
+    const themeToggleDesktop = document.getElementById("theme-toggle-desktop");
+    const themeToggleMobile = document.getElementById("theme-toggle-mobile");
+    const themeToggleDesktopIcon = document.getElementById("theme-toggle-desktop-icon");
+    const themeToggleMobileIcon = document.getElementById("theme-toggle-mobile-icon");
+    const themeToggleText = document.getElementById("theme-toggle-text");
+    const themeStatus = document.getElementById("theme-status");
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    function renderIcon(target, iconName, className) {
+      if (!target) return;
+      target.innerHTML = '<i data-lucide="' + iconName + '" class="' + className + '" aria-hidden="true"></i>';
+      lucide.createIcons();
+    }
+
+    function getStoredTheme() {
+      try {
+        return localStorage.getItem(storageKey);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function storeTheme(theme) {
+      try {
+        localStorage.setItem(storageKey, theme);
+      } catch (error) {
+        return;
+      }
+    }
+
+    function setThemeButtonState(isDark) {
+      const nextThemeLabel = isDark ? "Switch to light mode" : "Switch to dark mode";
+      const currentThemeText = isDark ? "Dark" : "Light";
+      const currentThemeStatus = isDark ? "Dark mode enabled" : "Light mode enabled";
+
+      [themeToggleDesktop, themeToggleMobile].forEach((button) => {
+        if (!button) return;
+        button.setAttribute("aria-pressed", String(isDark));
+        button.setAttribute("aria-label", nextThemeLabel);
+      });
+
+      if (themeToggleText) {
+        themeToggleText.textContent = currentThemeText;
+      }
+
+      themeStatus.textContent = currentThemeStatus;
+
+      renderIcon(themeToggleDesktopIcon, isDark ? "moon-star" : "sun-medium", "h-4 w-4");
+      renderIcon(themeToggleMobileIcon, isDark ? "moon-star" : "sun-medium", "h-4 w-4");
+    }
+
+    function applyTheme(theme, persistTheme, announceTheme) {
+      const isDark = theme === "dark";
+
+      root.classList.toggle("dark", isDark);
+      root.dataset.theme = theme;
+      setThemeButtonState(isDark);
+
+      if (!announceTheme) {
+        themeStatus.textContent = "";
+      }
+
+      if (persistTheme) {
+        storeTheme(theme);
+      }
+    }
+
+    function toggleTheme() {
+      const nextTheme = root.classList.contains("dark") ? "light" : "dark";
+      applyTheme(nextTheme, true, true);
+    }
+
+    if (themeToggleDesktop) {
+      themeToggleDesktop.addEventListener("click", toggleTheme);
+    }
+
+    if (themeToggleMobile) {
+      themeToggleMobile.addEventListener("click", toggleTheme);
+    }
+
+    const initialTheme = root.classList.contains("dark") ? "dark" : "light";
+    applyTheme(initialTheme, false, false);
+    lucide.createIcons();
+
+    const handleSystemThemeChange = (event) => {
+      if (!getStoredTheme()) {
+        applyTheme(event.matches ? "dark" : "light", false, false);
+      }
+    };
+
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", handleSystemThemeChange);
+    } else if (typeof mediaQuery.addListener === "function") {
+      mediaQuery.addListener(handleSystemThemeChange);
+    }
+  </script>
+</body>
+</html>
